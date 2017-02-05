@@ -14,7 +14,7 @@ class TicTacToe {
     }
 
     getCurrentPlayerSymbol() {
-      return this.currentsym
+      return this.currentsym;
     }
 
     nextTurn(rowIndex, columnIndex) {
@@ -72,7 +72,7 @@ class TicTacToe {
     }
 
     getFieldValue(rowIndex, colIndex) {
-
+        return this.field[rowIndex][colIndex];
     }
 }
 
