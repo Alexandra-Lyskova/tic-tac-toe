@@ -21,29 +21,27 @@ class TicTacToe {
       if (rowIndex > 2 || rowIndex < 0 || columnIndex > 2 || columnIndex < 0){
         return null;
       }else {
-
-            if(this.field[rowIndex][columnIndex] === null){
-                this.field[rowIndex][columnIndex] = this.current;
-                this.count++;
+        if(this.field[rowIndex][columnIndex] === null){
+          this.field[rowIndex][columnIndex] = this.current;
+          this.count++;
             } else {
                 return null;
             }
 
-      for (var i = 0; i < 3; i++){
-        if((this._field[i][0] == this.currentsym) && (this._field[i][1] == this.currentsym) && (this._field[i][2] == this.currentsym))||
-        ((this._field[0][i] == this.currentsym) && (this._field[1][i] == this.currentsym) && (this._field[2][i] == this.currentsym))||
-        ((this._field[0][0] == this.currentsym) && (this._field[1][1] == this.currentsym) && (this._field[2][2] == this.currentsym))||
-        ((this._field[2][0] == this.currentsym) && (this._field[1][1] == this.currentsym) && (this._field[0][2] == this.currentsym)){
-          this.isFinished = true;
-          this.winner = this.currentsym;
+        for (var i = 0; i < 3; i++){
+          if((this.field[i][0] == this.currentsym) && (this.field[i][1] == this.currentsym) && (this.field[i][2] == this.currentsym))||
+          ((this.field[0][i] == this.currentsym) && (this.field[1][i] == this.currentsym) && (this.field[2][i] == this.currentsym))||
+          ((this.field[0][0] == this.currentsym) && (this.field[1][1] == this.currentsym) && (this.field[2][2] == this.currentsym))||
+          ((this.field[2][0] == this.currentsym) && (this.field[1][1] == this.currentsym) && (this.field[0][2] == this.currentsym)){
+            this.isFinished = true;
+            this.winner = this.currentsym;
+          }
         }
-      }
-      if(this.currentsym === 'x'){
-                this.currentsym = 'o';
-            } else {
-                this.currentsym = 'x';
-            }
-
+        if(this.currentsym === 'x'){
+          this.currentsym = 'o';
+        } else {
+          this.currentsym = 'x';
+        }
       }
     }
 
