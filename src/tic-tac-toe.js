@@ -20,9 +20,9 @@ class TicTacToe {
     nextTurn(rowIndex, columnIndex) {
       if (rowIndex > 2 || rowIndex < 0 || columnIndex > 2 || columnIndex < 0){
         return null;
-      }else {
+      } else {
         if(this.field[rowIndex][columnIndex] === null){
-          this.field[rowIndex][columnIndex] = this.current;
+          this.field[rowIndex][columnIndex] = this.currentsym;
           this.count++;
             } else {
                 return null;
